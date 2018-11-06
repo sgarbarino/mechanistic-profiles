@@ -4,7 +4,7 @@ function [connectome_mean,connectome_std,connectome_label,connect,connectome_tot
     = load_connectomeHCP_meanFS(idx)
 
 %% load all the connectomes that I've generated
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/100206_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/100206_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -13,7 +13,7 @@ fclose(fileID);
 connectomegif100206 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/100610_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/100610_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -22,7 +22,7 @@ fclose(fileID);
 connectomegif100610 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/102513_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/102513_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -32,7 +32,7 @@ connectomegif102513 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/107018_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/107018_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -41,7 +41,7 @@ fclose(fileID);
 connectomegif107018 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/110613_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/110613_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -50,7 +50,7 @@ fclose(fileID);
 connectomegif110613 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/111009_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/111009_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -59,7 +59,7 @@ fclose(fileID);
 connectomegif111009 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/112112_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/112112_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -68,7 +68,7 @@ fclose(fileID);
 connectomegif112112 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/112314_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/112314_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -77,7 +77,7 @@ fclose(fileID);
 connectomegif112314 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/114217_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/114217_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -86,7 +86,7 @@ fclose(fileID);
 connectomegif114217 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/114621_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/114621_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -95,7 +95,7 @@ fclose(fileID);
 connectomegif114621 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/118023_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/118023_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -104,7 +104,7 @@ fclose(fileID);
 connectomegif118023 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/118225_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/118225_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -113,7 +113,7 @@ fclose(fileID);
 connectomegif118225 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/121416_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/121416_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -122,7 +122,7 @@ fclose(fileID);
 connectomegif121416 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/124624_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/124624_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -131,7 +131,7 @@ fclose(fileID);
 connectomegif124624 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/128026_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/128026_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -140,7 +140,7 @@ fclose(fileID);
 connectomegif128026 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/129331_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/129331_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -149,7 +149,7 @@ fclose(fileID);
 connectomegif129331 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/129937_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/129937_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -158,7 +158,7 @@ fclose(fileID);
 connectomegif129937 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/130619_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/130619_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -167,7 +167,7 @@ fclose(fileID);
 connectomegif130619 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/131419_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/131419_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -176,7 +176,7 @@ fclose(fileID);
 connectomegif131419 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/131823_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/131823_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -185,7 +185,7 @@ fclose(fileID);
 connectomegif131823 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/134223_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/134223_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -194,7 +194,7 @@ fclose(fileID);
 connectomegif134223 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/134728_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/134728_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -203,7 +203,7 @@ fclose(fileID);
 connectomegif134728 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/139839_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/139839_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -212,7 +212,7 @@ fclose(fileID);
 connectomegif139839 = [dataArray{1:end-1}];
 clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
-filename = '/home/sgarbari/Documents/WORK/POND/data-onlyconnectomes/HCP_GIF3_justconnectomes/freesurfer/141119_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
+filename = 'freesurfer/141119_tckgen32M_freesurfer_tckedit16M_downsampled_tcksift4M_connectome.tsv';
 delimiter = ' ';
 formatSpec = '%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%[^\n\r]';
 fileID = fopen(filename,'r');
@@ -223,7 +223,7 @@ clearvars filename delimiter startRow endRow formatSpec fileID dataArray ans;
 
 
 %% load label
-filename = '/home/sgarbari/Documents/WORK/POND/code/Various_for_network/build_connectome/dataHCP-MS/connectome_label.txt';
+filename = 'data-dummy/connectome_label.txt';
 delimiter = {''};
 formatSpec = '%s%[^\n\r]';
 fileID = fopen(filename,'r');
