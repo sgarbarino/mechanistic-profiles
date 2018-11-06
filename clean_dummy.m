@@ -2,8 +2,8 @@
 %% clean the data: select just Volumes, merge L/R + over lobes
 
 
-load data/names_volumes_FS.mat 
-load data/data_dummy.mat 
+load data_dummy/names_volumes_FS.mat 
+load data/_dummy/data_dummy.mat 
 % Data mimics ADNI data, but values are random
 
 
