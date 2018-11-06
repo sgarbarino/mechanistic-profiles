@@ -29,7 +29,7 @@ RID = unique(Data_tot.RID);
 % if just healthy sub
 % RID = unique(demoHC.RID);
 
-load data/ROIs.mat
+load data-dummy/ROIs.mat
 names_biomarkers = ROIs;
 
 N_RUN = length(RID); % number or runs - of individual subjects
