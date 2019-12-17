@@ -1,14 +1,7 @@
 %% script to run the whole pipeline
 
-% STEPS 1-4 can be run with dummy dataset only, which mimics ADNI data.
+% STEPS 1-8 can be run with dummy dataset only, which mimics ADNI data.
 
-% STEPS 5-9 can be run on dummy, or AD, HA or PPMS processed,
-% unrecognisable data. Such data can be requested to the author at:
-% sara.garbarino@inria.fr
-
-% STEP 10 run with AD+HA+PPMS data to generate the plots; it does not run
-% with dummy dataset, as it is a single dataset and ternary and tsne would
-% not be meaningful.
 
 %% 1: load and pre-process AD/HA/PPMS data; 
 % load and pre-process connectomes and compute GT metrics
@@ -18,8 +11,8 @@
 
 clear all
 
-% dataset = 'dummy';
-dataset = 'ADNI';
+dataset = 'dummy';
+% dataset = 'ADNI';
 % dataset = 'PPMS';
 % dataset = 'RS';
 
@@ -47,16 +40,7 @@ if strcmp(dataset, 'dummy')
     load_ES
 end
 
-%% 5: load ADNI, RS or PPMS data without raw data but with GP output - for sharing
-if strcmp(dataset, 'ADNI')
-    load data/AD.mat 
-elseif strcmp(dataset, 'PPMS')
-    load data/PPMS.mat
-elseif strcmp(dataset, 'RS')
-    load data/HA.mat 
-end
-
-%% 6: run mechanistic profiles model Y_meas_cont = beta*X_all_cont
+%% 5: run mechanistic profiles model Y_meas_cont = beta*X_all_cont
 
 % X contains all the GT metrics: 
 % Betwenness centrality (SB); closeness centrality (SCLO); weighted degree
@@ -122,7 +106,7 @@ for i = 1:9
     10000,'plotresult', 1, 'showprogress', 250);
 end
 
-%% 7: run individual mechanistic profiles and individual bootstrap
+%% 6: run individual mechanistic profiles and individual bootstrap
 for ind = 1:length(runs)
     Y_meas_cont_id(:,ind) = struct_OUT_all.(runs{ind}).der_values ;
 end
@@ -156,7 +140,7 @@ for i = 1:9
     fprintf(formatSpec,GT_metrics{i}, mean_mean_beta_a_cont_boot(i),std_beta_a_cont_boot(i));
 end
 
-%% 8: run mechanistic profiles model for end-stage data
+%% 7: run mechanistic profiles model for end-stage data
 
 Y_meas_cont_ES = table_OUT_es.YY; % mean of all subj in struct_OUT_ES
 Y_meas_cont_std = table_OUT_es.Y_STD;
@@ -183,9 +167,9 @@ opt.maxiter = 100000;
 beta_a_cont_ind_es = isra(X_all_cont, X_all_cont', Y_meas_cont_id_es, beta0_a_ind, opt);
 
 
-%% 9: randomization of graphs 
+%% 8: randomization of graphs 
 %1. compute GT metrics at random (i.e. on random N-nodes graph)
-load data/connectomes.mat
+load data-dummy/connectomes.mat
 G=WattsStrogatz(N,floor(N/2)-2,1);
 adj_rand = full(adjacency(G));
 ranking_rnd;
@@ -230,65 +214,5 @@ for i = 1:9
     fprintf(formatSpec,GT_metrics{i}, mean_mean_beta_a_cont_boot_rnd(i),std_beta_a_cont_boot_rnd(i));
 end
 
-
-%% compute centers and population for plots - saved in separate mat files for endstage, HC or all subjects - only for dummy
-% centerAD = [sum(mean_beta_a_cont_rnd(1:4)); sum(mean_beta_a_cont_rnd(5:6)); mean_beta_a_cont_rnd(7); mean_beta_a_cont_rnd(8)];
-% centerMS = [sum(mean_beta_a_cont_rnd(1:4)); sum(mean_beta_a_cont_rnd(5:6)); mean_beta_a_cont_rnd(7); mean_beta_a_cont_rnd(8)];
-% centerRS = [sum(mean_beta_a_cont_rnd(1:4)); sum(mean_beta_a_cont_rnd(5:6)); mean_beta_a_cont_rnd(7); mean_beta_a_cont_rnd(8)];
-% nodAD = sum(beta_a_cont_ind_rnd(1:4,:));
-% troAD = sum(beta_a_cont_ind_rnd(5:6,:));
-% traAD = beta_a_cont_ind_rnd(7,:);
-% proAD = beta_a_cont_ind_rnd(8,:);
-% nodMS = sum(beta_a_cont_ind_rnd(1:4,:));
-% troMS = sum(beta_a_cont_ind_rnd(5:6,:));
-% traMS = beta_a_cont_ind_rnd(7,:);
-% proMS = beta_a_cont_ind_rnd(8,:);
-% nodRS = sum(beta_a_cont_ind_rnd(1:4,:));
-% troRS = sum(beta_a_cont_ind_rnd(5:6,:));
-% traRS = beta_a_cont_ind_rnd(7,:);
-% proRS = beta_a_cont_ind_rnd(8,:);
-% centerAD_boot = [sum(beta_a_cont_boot_rnd(1:4)); ...
-%     sum(beta_a_cont_boot_rnd(5:6)); beta_a_cont_boot_rnd(7);...
-%     beta_a_cont_boot_rnd(8)];
-% centerPPMS_boot = [sum(beta_a_cont_boot_rnd(1:4)); ...
-%     sum(beta_a_cont_boot_rnd(5:6)); beta_a_cont_boot_rnd(7);...
-%     beta_a_cont_boot_rnd(8)];
-% centerRS_boot = [sum(beta_a_cont_boot_rnd(1:4)); ...
-%     sum(beta_a_cont_boot_rnd(5:6)); beta_a_cont_boot_rnd(7);...
-%     beta_a_cont_boot_rnd(8)];
-% meanAD_boot = [sum(mean_mean_beta_a_cont_boot_rnd(1:4)); ...
-%     sum(mean_mean_beta_a_cont_boot_rnd(5:6)); mean_mean_beta_a_cont_boot_rnd(7);...
-%     mean_mean_beta_a_cont_boot_rnd(8)];
-% stdAD_boot = [sum(beta_a_cont_ind_rnd(1:4)); ...
-%     sum(beta_a_cont_ind_rnd(5:6)); beta_a_cont_ind_rnd(7);...
-%     beta_a_cont_ind_rnd(8)];
-% meanPPMS_boot = [sum(mean_mean_beta_a_cont_boot_rnd(1:4)); ...
-%     sum(mean_mean_beta_a_cont_boot_rnd(5:6)); mean_mean_beta_a_cont_boot_rnd(7);...
-%     mean_mean_beta_a_cont_boot_rnd(8)];
-% stdPPMS_boot = [sum(beta_a_cont_ind_rnd(1:4)); ...
-%     sum(beta_a_cont_ind_rnd(5:6)); beta_a_cont_ind_rnd(7);...
-%     beta_a_cont_ind_rnd(8)];
-% meanRS_boot = [sum(mean_mean_beta_a_cont_boot_rnd(1:4)); ...
-%     sum(mean_mean_beta_a_cont_boot_rnd(5:6)); mean_mean_beta_a_cont_boot_rnd(7);...
-%     mean_mean_beta_a_cont_boot_rnd(8)];
-% stdRS_boot = [sum(beta_a_cont_ind_rnd(1:4)); ...
-%     sum(beta_a_cont_ind_rnd(5:6)); beta_a_cont_ind_rnd(7);...
-%     beta_a_cont_ind_rnd(8)];
-% centerAD_ES = [sum(mean_beta_a_es(1:4)); sum(mean_beta_a_es(5:6)); mean_beta_a_es(7); mean_beta_a_es(8)];
-% centerMS_ES = [sum(mean_beta_a_es(1:4)); sum(mean_beta_a_es(5:6)); mean_beta_a_es(7); mean_beta_a_es(8)];
-% centerRS_ES = [sum(mean_beta_a_es(1:4)); sum(mean_beta_a_es(5:6)); mean_beta_a_es(7); mean_beta_a_es(8)];
-% meanAD_es = [sum(beta_a_cont_ind_es(1:4)); ...
-%     sum(beta_a_cont_ind_es(5:6)); beta_a_cont_ind_es(7);...
-%     beta_a_cont_ind_es(8)];
-% meanPPMS_es = [sum(beta_a_cont_ind_es(1:4)); ...
-%     sum(beta_a_cont_ind_es(5:6)); beta_a_cont_ind_es(7);...
-%     beta_a_cont_ind_es(8)];
-% meanRS_es = [sum(beta_a_cont_ind_es(1:4)); ...
-%     sum(beta_a_cont_ind_es(5:6)); beta_a_cont_ind_es(7);...
-%     beta_a_cont_ind_es(8)];
-
-%% 10: plot for tsne and ternary
-
-plot_data;
 
 
