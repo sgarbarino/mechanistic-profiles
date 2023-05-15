@@ -22,7 +22,7 @@ Code for building topological profiles of neurological diseases from brain regio
   * shortest path to epicenter (via connections)
   * shortest path to epicenter (via cortical paths - also called "cortical proximity")
   * constant, homogeneous, isotropic propagation
-* The folder "connectome_data" contains some pre-computed average structural connectome and average cortical distance data on a set of HCP brains: https://www.humanconnectomeproject.org/ (for how these were computed, see Oxtoby et al, Frontiers, 2017 and Garbarino et al, eLife 2019)
+* The folder "connectome_data" contains some pre-computed average structural connectome and average cortical distance data on a set of HCP brains: https://www.humanconnectomeproject.org/ (for how these were computed, see Oxtoby et al, Frontiers 2017 and Garbarino et al, eLife 2019)
 
 -------
 
