@@ -1,6 +1,6 @@
 # topological-profiles
 
-Code for building mechanistic profiles of neurological diseases from grey matter volumetric information. 
+Code for building topological profiles of neurological diseases from grey matter volumetric information. 
 
 ***05/2023: major update of the code to run with the released version of GPPM***
 
