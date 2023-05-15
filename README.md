@@ -27,8 +27,9 @@ Code for building topological profiles of neurological diseases from brain regio
 -------
 
 ## Older version (Matlab)
-The previous version of the code, running on Matlab, can be still found in the "matlab" branch. Please note that it will run smoothly on *dummy data*, but IT WILL NOT EASILY RUN if you have data obtained with the released version GPPM: https://gitlab.inria.fr/epione/GP_progression_model_V2. Main.m launches the code on dummy ADNI data.
+The previous version of the code, running on Matlab, can be still found in the "matlab" branch. Please note that it will run smoothly on *dummy data*, but IT WILL NOT EASILY RUN if you have data obtained with the released version GPPM: https://gitlab.inria.fr/epione/GP_progression_model_V2. 
+Main.m launches the code on dummy ADNI data.
 
-It required:
+It requires:
 * "Brain Connectivity Toolbox" (https://sites.google.com/site/bctnet/);
 * "npy-matlab" (https://github.com/kwikteam/npy-matlab)
