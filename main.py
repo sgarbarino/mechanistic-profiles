@@ -23,7 +23,7 @@ model = GP_progression_model.GP_Progression_Model()
 model.Load('./GPPM_data/')
 # model.Plot()
 
-## Compute cohort-level maximum rates of change (for each biomarkers)
+## Load and assign GPs and time-ranges
 tr = model.Return_time_parameters()
 new_x = model.Transform_subjects()
 
@@ -61,7 +61,7 @@ counts = np.bincount(np.argmax(Y_last, 0))
 epi = np.argmax(counts)
 epi_name = model.names_biomarkers[epi]
 
-####### Load connectome and cortical distances data
+####### Load connectome and cortical distances data (on cortical regions)
 cortical = pd.DataFrame(pd.read_csv('./connectome_data/cortical_distances_original.csv', header=0, index_col=0)) # NOTE: The cortical distance cross-hemisphere is set to 0
 connectome = pd.DataFrame(pd.read_csv('./connectome_data/connectome_mean.csv', header=0,index_col=0))
 N = np.shape(connectome)[0]
