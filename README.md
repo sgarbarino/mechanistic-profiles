@@ -1,6 +1,6 @@
 # topological-profiles
 
-Code for building topological profiles of neurological diseases from grey matter volumetric information. 
+Code for building topological profiles of neurological diseases from brain regional information (from MRI or PET imaging)
 
 ***05/2023: major update of the code to run with the released version of GPPM***
 
