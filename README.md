@@ -2,7 +2,7 @@
 
 Code for building topological profiles of neurological diseases from brain regional information (from MRI or PET imaging)
 
-***05/2023: major update of the code to run with the released version of GPPM***
+***05/2023: major update of the code to run with the released version of GPPM (https://gitlab.inria.fr/epione/GP_progression_model_V2)***
 
 ## Note
 * The topological profile code is now implemented in python (3.7) for a smoother interface with GPPM:  https://gitlab.inria.fr/epione/GP_progression_model_V2.
