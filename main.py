@@ -1,5 +1,6 @@
 import sys
-sys.path.append( '../GP_progression_model_V2/src' ) ## path where the functions of GPPM are
+# sys.path.append( '../GP_progression_model_V2/src' ) ## path where the functions of GPPM are
+sys.path.append( '/Users/saragarbarino/Documents/WORK/MIDA/labs/liscomp/code/GPPM/GP_progression_model_V2/src' )
 import GP_progression_model
 import numpy as np
 import torch
@@ -37,7 +38,7 @@ for bio_pos, biomarker in enumerate(list_biomarker):
         x_min = np.float(np.min(x_data))
     if np.float(np.max(x_data)) > x_max:
         x_max = np.float(np.max(x_data))
-x_range = Variable(torch.arange(x_min, x_max, np.float((x_max - x_min) / 200)))
+x_range = Variable(torch.arange(x_min, x_max, np.float((x_max - x_min) / 150)))
 x_range = x_range.reshape(x_range.size()[0], 1)
 
 ## predictions contain N_real realisations of each GP and their derivatives.
@@ -99,7 +100,7 @@ gt_invclust_sym = (gt_invclust[:int(N/2)] + gt_invclust[int(N/2):])/2
 # NOTE: connectome distance is computed after taking the mean over the two hemispheres
 connectome_norm_sym = (connectome_norm.values[int(N/2):,int(N/2):] + connectome_norm.values[:int(N/2), :int(N/2)])/2
 dist_conn_sym = bct.distance_wei(1./connectome_norm_sym);
-gt_short_conn_sym = dist_conn_sym[0][epi,:]
+gt_short_conn_sym = 1 - dist_conn_sym[0][epi,:] # the closest = the most vulnerable
 # if not, uncomment the following and comment the previous:
 # dist_conn = bct.distance_wei(1./connectome_norm.values)
 # gt_short_conn=dist_conn[0][epi,:]
@@ -109,7 +110,7 @@ gt_short_conn_sym = dist_conn_sym[0][epi,:]
 # NOTE: cortical distance cannot be computed cross-hemisphere, so taking the mean over the two hemispheres
 cortical_norm_sym = (cortical_norm.values[int(N/2):,int(N/2):] + cortical_norm.values[:int(N/2), :int(N/2)])/2
 dist_cort_sym = bct.distance_wei(1./cortical_norm_sym);
-gt_short_cort_sym = dist_cort_sym[0][epi,:]
+gt_short_cort_sym = 1 - dist_cort_sym[0][epi,:] # the closest = the most vulnerable
 
 ## Constant progression
 gt_constant_sym = np.ones((int(N/2),))
@@ -169,7 +170,8 @@ for sub in range(model.N_subs):
     time_inter_indiv = np.argmin(np.abs(x_range.numpy() * model.x_mean_std[0][1] + model.x_mean_std[0][0] - np.mean(
         x_data * model.x_mean_std[0][1] + model.x_mean_std[0][0])))
     for bio in range(model.N_biomarkers-7):
-        Y_indiv[bio,sub] = dGP[bio][time_inter_indiv]
+        dGP_mean = np.mean([predictions[bio][i][:, 1].detach().numpy() for i in range(N_real)], 0)
+        Y_indiv[bio,sub] = dGP_mean[time_inter_indiv]
 
 # Run the algorithm for individual profiles (using same parameters as cohort-level)
 beta_indiv = [[] for i in range(model.N_subs)]
